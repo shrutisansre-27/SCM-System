@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Student or Admin</title>
+    <link rel="stylesheet" href="./css/studoradmin.css">
+
+    <script>
+        function goTonextpg(){
+            window.location.href="forgotpassword.html";
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="login_type">Login as:</label>
+                <select id="login_type" name="login_type" required>
+                    <option value="student">Student</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+            <!-- Link to Forgot Password -->
+            <p class="forgot-password link">
+                <label><a href="forgetpassword.html">Forgot Password?</a></label>
+
+            </p>
+
+            <!-- Link to Sign-up -->
+            <p class="studoradminreg link">Don’t have an account? <a href="studoradminreg.html">Sign up here</a></p>
+        </form>
+    </div>
+</body>
+</html>

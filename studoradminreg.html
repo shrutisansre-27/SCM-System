@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Registration</title>
+    <link rel="stylesheet" href="./css/studoradminreg.css">
+    <script>
+        function toggleForm() {
+            const userType = document.getElementById("user-type").value;
+            document.getElementById("student-form").style.display = userType === "student" ? "block" : "none";
+            document.getElementById("admin-form").style.display = userType === "admin" ? "block" : "none";
+        }
+    </script>
+    <style>
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration</h1>
+        <div class="form-row">
+            <label for="user-type">Register as:</label>
+            <select id="user-type" onchange="toggleForm()">
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+
+        <!-- Student Registration Form -->
+        <form id="student-form" action="register_student.php" method="POST" style="display: block;">
+            <h2>Student Registration</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="text" id="year" name="year" placeholder="Enter Year" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="roll">Roll Number:</label>
+                    <input type="text" id="roll" name="roll" placeholder="Enter Roll Number" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" name="department" placeholder="Enter Department" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <input type="text" id="class" name="class" placeholder="Enter Class" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" placeholder="Enter Address" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="prn">PRN:</label>
+                    <input type="text" id="prn" name="prn" placeholder="Enter PRN" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number" required>
+                </div>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <!-- Admin Registration Form -->
+        <form id="admin-form" action="register_admin.php" method="POST" style="display: none;">
+            <h2>Admin Registration</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="admin-name">Name:</label>
+                    <input type="text" id="admin-name" name="name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-email">Email:</label>
+                    <input type="email" id="admin-email" name="email" placeholder="Enter Email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="admin-password">Password:</label>
+                    <input type="password" id="admin-password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-department">Department:</label>
+                    <input type="text" id="admin-department" name="department" placeholder="Enter Department" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="admin-phone">Phone Number:</label>
+                    <input type="text" id="admin-phone" name="phone" placeholder="Enter Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-address">Address:</label>
+                    <textarea id="admin-address" name="address" placeholder="Enter Address" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+               
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <!-- Login Link -->
+        <p class="studoradmin link">Already have an account? <a href="studoradmin.html">Login here</a></p>
+    </div>
+</body>
+</html>

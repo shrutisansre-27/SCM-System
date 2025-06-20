@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/contactus.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="ContactServlet" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div class="contact-info">
+            <h3>Reach Us At</h3>
+            <p>Email: support@complaintsystem.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123, Complaint Avenue, City, Country</p>
+        </div>
+    </div>
+
+    <!-- Include footer here if needed -->
+    <!-- <footer>Footer content goes here...</footer> -->
+</body>
+</html>
